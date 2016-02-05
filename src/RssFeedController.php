@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
  * @author Patrick van Kouteren <info@wedesignit.nl>
  * @author Gawain Lynch <gawain.lynch@gmail.com>
  */
-class RssFeedController implements ControllerProviderInterface
+class AmpFeedController implements ControllerProviderInterface
 {
     /** @var Application $app */
     private $app;
@@ -36,12 +36,12 @@ class RssFeedController implements ControllerProviderInterface
         $ctr = $app['controllers_factory'];
 
         // Sitewide feed
-        $this->app->match('/rss/feed.{extension}', [$this, 'feed'])
+        $this->app->match('/amp/feed.{extension}', [$this, 'feed'])
             ->assert('extension', '(xml|rss)')
         ;
 
         // ContentType specific feed(s)
-        $this->app->match('/{contenttypeslug}/rss/feed.{extension}', [$this, 'feed'])
+        $this->app->match('/{contenttypeslug}/amp/feed.{extension}', [$this, 'feed'])
             ->assert('extension', '(xml|rss)')
             ->assert('contenttypeslug', $this->getContentTypeAssert())
         ;
@@ -65,7 +65,7 @@ class RssFeedController implements ControllerProviderInterface
 
         // Defaults for later
         $defaultFeedRecords = 5;
-        $defaultTemplate = 'rss.twig';
+        $defaultTemplate = 'amp.twig';
         $content = [];
         $contentTypes = [];
 
