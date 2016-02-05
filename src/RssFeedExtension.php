@@ -8,7 +8,7 @@ use Bolt\Legacy\Content;
 use Maid\Maid;
 
 /**
- * RSS amp extension for Bolt
+ * AMP extension for Bolt
  *
  * @author Mattias Lundbäck <mattias.lundback@ekonomism.us>
  */
