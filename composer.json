@@ -1,9 +1,9 @@
 {
-    "name": "bolt/rssfeed",
-    "description": "RSS feeds extension for Bolt",
+    "name": "bolt/ampfeed",
+    "description": "AMP feeds extension for Bolt",
     "type": "bolt-extension",
     "keywords": [
-        "RSS"
+        "AMP"
     ],
     "require": {
         "bolt/bolt": "^3.0"
@@ -11,23 +11,19 @@
     "license": "GPL-3.0+",
     "authors": [
         {
-            "name": "Patrick van Kouteren",
-            "email": "info@wedesignit.nl"
-        },
-        {
-            "name": "Gawain Lynch",
-            "email": "gawain.lynch@gmail.com"
+            "name": "Mattias Lundbäck",
+            "email": "mattias.lundback@ekonomism.us"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\Bolt\\RssFeed\\": [
+            "Bolt\\Extension\\Bolt\\AmpFeed\\": [
                 "src/"
             ]
         }
     },
     "extra": {
-        "bolt-class": "Bolt\\Extension\\Bolt\\RssFeed\\RssFeedExtension",
+        "bolt-class": "Bolt\\Extension\\Bolt\\AmpFeed\\AmpFeedExtension",
         "branch-alias": {
             "dev-master": "3.0.x-dev"
         }
