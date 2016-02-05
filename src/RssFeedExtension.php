@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolt\Extension\Bolt\RssFeed;
+namespace Bolt\Extension\Bolt\AmpFeed;
 
 use Bolt\Extension\SimpleExtension;
 use Bolt\Helpers\Html;
@@ -8,12 +8,11 @@ use Bolt\Legacy\Content;
 use Maid\Maid;
 
 /**
- * RSS feeds extension for Bolt, originally by WeDesignIt, Patrick van Kouteren
+ * RSS amp extension for Bolt
  *
- * @author Patrick van Kouteren <info@wedesignit.nl>
- * @author Gawain Lynch <gawain.lynch@gmail.com>
+ * @author Mattias Lundbäck <mattias.lundback@ekonomism.us>
  */
-class RssFeedExtension extends SimpleExtension
+class AmpFeedExtension extends SimpleExtension
 {
     /**
      * {@inheritdoc}
@@ -21,7 +20,7 @@ class RssFeedExtension extends SimpleExtension
     protected function registerFrontendControllers()
     {
         return [
-            '/' => new RssFeedController($this->getContainer(), $this->getConfig()),
+            '/' => new AmpFeedController($this->getContainer(), $this->getConfig()),
         ];
     }
 
@@ -42,7 +41,7 @@ class RssFeedExtension extends SimpleExtension
             'sitewide' => [
                 'enabled'        => true,
                 'feed_records'   => 10,
-                'feed_template'  => 'rss.twig',
+                'feed_template'  => 'amp.twig',
                 'content_length' => 0,
                 'content_types'  => ['pages'],
                 ],
@@ -59,7 +58,7 @@ class RssFeedExtension extends SimpleExtension
      *
      * @return string RSS safe string
      */
-    public function rssSafe($record, $fields = '', $excerptLength = 0)
+    public function ampSafe($record, $fields = '', $excerptLength = 0)
     {
         // Make sure we have an array of fields. Even if it's only one.
         if (!is_array($fields)) {
