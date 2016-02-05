@@ -1,10 +1,10 @@
 # This is the config file for the RSS Feed extension.
 # Feed will be accessible at the following urls:
 # Site RSS:
-#     <yoursite>/rss/feed.(xml|rss)
+#     <yoursite>/amp/feed.(xml|rss)
 #
 # Contenttype RSS:
-#     <yoursite>/contenttype/rss/feed.(xml|rss)
+#     <yoursite>/contenttype/amp/feed.(xml|rss)
 #
 # The contenttype is what you define in this config.
 
@@ -30,20 +30,20 @@
 sitewide:
     enabled: true
     feed_records: 10
-    feed_template: rss.twig
+    feed_template: amp.twig
     content_length: 0
     content_types: [entries, pages]
 
-# Contenttype specific RSS Examples
+# Contenttype specific AMP Examples
 # ---------------------------------
 #pages:
 #    enabled: true
 #    feed_records: 10
-#    feed_template: rss.twig
+#    feed_template: amp.twig
 #    content_length: 0
 
 #entries:
 #    enabled: false
 #    feed_records: 1
-#    feed_template: rss.twig
+#    feed_template: amp.twig
 #    content_length: 400
