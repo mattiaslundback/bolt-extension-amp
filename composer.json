@@ -17,13 +17,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "Bolt\\Extension\\mattiaslundback\\AmpFeed\\": [
+            "Bolt\\Extension\\Bolt\\AmpFeed\\": [
                 "src/"
             ]
         }
     },
     "extra": {
-        "bolt-class": "Bolt\\Extension\\mattiaslundback\\AmpFeed\\",
+        "bolt-class": "Bolt\\Extension\\Bolt\\AmpFeed\\",
         "branch-alias": {
             "dev-master": "3.0.x-dev"
         }
