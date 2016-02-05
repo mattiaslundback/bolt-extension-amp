@@ -1,6 +1,6 @@
 <?php
 
-namespace Bolt\Extension\Bolt\RssFeed;
+namespace Bolt\Extension\Bolt\AmpFeed;
 
 use Bolt\Storage\EntityManager;
 use Silex\Application;
@@ -11,8 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * RSSFeed Controller
  *
- * @author Patrick van Kouteren <info@wedesignit.nl>
- * @author Gawain Lynch <gawain.lynch@gmail.com>
+ * @author Mattias Lundbäck <mattias.lundback@ekonomism.us>
  */
 class AmpFeedController implements ControllerProviderInterface
 {
