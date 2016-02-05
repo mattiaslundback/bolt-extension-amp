@@ -1,5 +1,5 @@
 {
-    "name": "bolt/ampfeed",
+    "name": "mattiaslundback/ampfeed",
     "description": "AMP feeds extension for Bolt",
     "type": "bolt-extension",
     "keywords": [
@@ -23,7 +23,7 @@
         }
     },
     "extra": {
-        "bolt-class": "Bolt\\Extension\\Bolt\\AmpFeed\\AmpFeedExtension",
+        "bolt-class": "Bolt\\Extension\\Bolt\\AmpFeed\\",
         "branch-alias": {
             "dev-master": "3.0.x-dev"
         }
